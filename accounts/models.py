@@ -30,3 +30,15 @@ class CustomUser(AbstractUser):
 
     def __str__(self):
         return self.username
+
+    @property
+    def is_admin(self):
+        return self.role == self.Role.ADMIN
+
+    @property
+    def is_expert(self):
+        return self.role == self.Role.EXPERT
+
+    @property
+    def is_user(self):
+        return self.role == self.Role.USER

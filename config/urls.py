@@ -8,6 +8,8 @@ urlpatterns = [
 
     # Home Page
     path("", include("core.urls")),
+
+    path("accounts/", include("accounts.urls")),
 ]
 
 if settings.DEBUG:
